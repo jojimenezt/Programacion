@@ -32,11 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="a_entero.cpp" />
-		<Unit filename="a_entero.h" />
-		<Unit filename="a_reales.cpp" />
-		<Unit filename="a_reales.h" />
+		<Unit filename="granja.cpp" />
+		<Unit filename="granja.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="negocio.cpp" />
+		<Unit filename="negocio.h" />
+		<Unit filename="numericos.cpp" />
+		<Unit filename="numericos.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
