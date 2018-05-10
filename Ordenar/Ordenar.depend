@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1523987704 source:c:\users\dnia-a-18\desktop\ordenar\negocio.cpp
+	"negocio.h"
+
+1523987412 c:\users\dnia-a-18\desktop\ordenar\negocio.h
+
+1524159738 source:c:\users\dnia-a-18\desktop\ordenar\main.cpp
+	<iostream>
+	"negocio.h"
+	"a_entero.h"
+
+1524159551 source:c:\users\dnia-a-18\desktop\ordenar\a-entero.cpp
+	"a-entero.h"
+
+1524159375 c:\users\dnia-a-18\desktop\ordenar\a-entero.h
+
+1524159738 c:\users\dnia-a-18\desktop\ordenar\a_entero.h
+
+1524159769 source:c:\users\dnia-a-18\desktop\ordenar\a_entero.cpp
+	"a_entero.h"
+
+1524153730 source:c:\users\familia jimenez\documents\codeblocks\ordenar\a_entero.cpp
+	"a_entero.h"
+
+1524153730 c:\users\familia jimenez\documents\codeblocks\ordenar\a_entero.h
+
+1524153730 source:c:\users\familia jimenez\documents\codeblocks\ordenar\main.cpp
+	<iostream>
+	"negocio.h"
+	"a_entero.h"
+
+1524153730 c:\users\familia jimenez\documents\codeblocks\ordenar\negocio.h
+
