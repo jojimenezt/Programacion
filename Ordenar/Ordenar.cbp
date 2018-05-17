@@ -39,12 +39,16 @@
 		<Unit filename="granja.cpp" />
 		<Unit filename="granja.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mat_bin.cpp" />
+		<Unit filename="mat_bin.h" />
 		<Unit filename="negocio.cpp" />
 		<Unit filename="negocio.h" />
 		<Unit filename="numericos.cpp" />
 		<Unit filename="numericos.h" />
 		<Unit filename="otros.cpp" />
 		<Unit filename="otros.h" />
+		<Unit filename="polinomios.cpp" />
+		<Unit filename="polinomios.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

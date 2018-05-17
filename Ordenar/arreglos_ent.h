@@ -35,4 +35,12 @@ int bin2dec(int* x, int n);
 
 int* dec2bin(int x);
 
+int mcd_arr(int *a, int n);
+
+int mcm_arr(int *a, int n);
+
+int* elm_repetidos(int* a, int n);
+
+int repetidos(int* a, int n);
+
 #endif // ARREGLOS_ENT_H_INCLUDED

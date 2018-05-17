@@ -32,4 +32,6 @@ int fact(int x);
 double mayor(int a, int b);
 
 int num_veces_div(int a, int b);
+
+int mcm(int a, int b);
 #endif // NUMERICOS_H_INCLUDED

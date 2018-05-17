@@ -5,6 +5,7 @@
 #include "geometricos.h"
 #include "otros.h"
 #include "arreglos_ent.h"
+#include "arr_conj.h"
 
 using namespace std;
 
@@ -340,7 +341,7 @@ void otros(){
 }
 
 void arreglos(){
- char** A= opciones(11);
+ char** A= opciones(13);
     A[0] = "Criba de Eratostenes";
     A[1] = "Suma de los elementos de un arreglo de numeros enteros";
     A[2] = "Promedio de un arreglo de numeros enteros";
@@ -352,9 +353,11 @@ void arreglos(){
     A[8] = "Arreglo con ceros al final";
     A[9] = "Numero binario a numero decimal";
     A[10] = "Numero decimal a binario";
+    A[11] = "MCD de un arreglo";
+    A[12] = "MCM de un arreglo";
     int k;
     do{
-        k = menu(A,11);
+        k = menu(A,13);
     switch(k){
         case 1:{
             int n_criba;
@@ -475,9 +478,26 @@ void arreglos(){
             cout<<endl;
         }
         break;
-
-
-
+        case 12:{
+            int n8;
+            cout<<"Ingrese el tamano del arreglo"<<endl;
+            cin>>n8;
+            int* x=crear_arreglo_int(n8);
+            cout<<"Arreglo 1"<<endl;
+            leer_arreglo_int(x,n8);
+            cout<<"El maximo comun divisor del arreglo es "<<mcd_arr(x,n8)<<endl;
+        }
+        break;
+        case 13:{
+            int n8;
+            cout<<"Ingrese el tamano del arreglo"<<endl;
+            cin>>n8;
+            int* x=crear_arreglo_int(n8);
+            cout<<"Arreglo 1"<<endl;
+            leer_arreglo_int(x,n8);
+            cout<<"El minimo comun multiplo del arreglo es "<<mcm_arr(x,n8)<<endl;
+        }
+        break;
     }
     }
     while(k!=0);
@@ -515,6 +535,13 @@ void menu_principal(){
 }
 
 int main(){
-    menu_principal();
+//    menu_principal();
+int x,y;
+    cin>>x>>y;
+    int* b=crear_arreglo_int(x);
+    int* c=crear_arreglo_int(y);
+    leer_arreglo_int(b,x);
+    leer_arreglo_int(c,y);
+    escribir_arreglo_int(union_arrs(b,x,c,y),repetidos(b,x));
     return 0;
 }

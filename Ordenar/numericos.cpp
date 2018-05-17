@@ -126,3 +126,7 @@ int num_veces_div(int a, int b){
         return b+1;
     }
 }
+
+int mcm(int a, int b){
+    return a*b/(mcd(a,b));
+}

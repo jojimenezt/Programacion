@@ -153,3 +153,63 @@ int* dec2bin(int x){
     a[n]=x/2;
     return a;
 }
+
+int mcd_arr(int *a, int n){
+    if(n==1){
+        return a[0];
+    }else{
+        return mcd(a[n-1],mcd_arr(a,n-1));
+    }
+}
+
+int mcm_arr(int *a, int n){
+    if(n==0){
+		return a[0];
+	}else{
+		return mcm(mcm_arr(a, n-1), a[n-1]);
+	}
+}
+
+int* elm_repetidos(int* a, int n){
+    int j=0,z=0,cont,num;
+    int* aux=crear_arreglo_int(n);
+    int* f=crear_arreglo_int(n);
+    for(int i=0;i<n;i++){
+        cont=0;
+        num=a[i];
+        aux[j]=num;
+        j++;
+        for(int k=0;k<n;k++){
+            if(aux[k]==num){
+                cont++;
+            }
+        }
+        if(cont==1){
+            f[z]=num;
+            z++;
+        }
+    }
+    return f;
+}
+
+int repetidos(int* a, int n){
+    int j=0,z=0,cont,num;
+    int* aux=crear_arreglo_int(n);
+    int* f=crear_arreglo_int(n);
+    for(int i=0;i<n;i++){
+        cont=0;
+        num=a[i];
+        aux[j]=num;
+        j++;
+        for(int k=0;k<n;k++){
+            if(aux[k]==num){
+                cont++;
+            }
+        }
+        if(cont==1){
+            f[z]=num;
+            z++;
+        }
+    }
+    return z;
+}
