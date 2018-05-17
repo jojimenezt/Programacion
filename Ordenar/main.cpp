@@ -503,19 +503,38 @@ void arreglos(){
     while(k!=0);
 }
 
-void menu_principal(){
- char** A= opciones(5);
-    A[0] = "La granja";
-    A[1] = "Numericos";
-    A[2] = "Geometricos";
-    A[3] = "Otros";
-    A[4] = "Arreglos";
+void arr_conj(){
+ char** A= opciones(7);
+    A[0] = "Union";
+    A[1] = "Interseccion";
+    A[2] = "Diferencia";
+    A[3] = "Diferencia simetrica";
+    A[4] = "Pertenece";
+    A[5] = "Contenido";
+    A[6] = "Representacion modificada";
     int k;
+    int n,m;
+    cout<<"Ingrese el tamano del primer conjunto"<<endl;
+    cin>>n;
+    int* a=crear_arreglo_int(n);
+    leer_arreglo_int(a,n);
+    cout<<"Ingrese el tamano del segundo conjunto"<<endl;
+    cin>>m;
+    int* b=crear_arreglo_int(m);
+    leer_arreglo_int(b,m);
     do{
-        k = menu(A,5);
+        k = menu(A,7);
     switch(k){
-        case 1:
-           granja();
+        case 1:{
+            int x=repetidos(a,n),y=repetidos(b,m);
+            int* c=crear_arreglo_int(x);
+            c=elm_repetidos(a,n);
+            int* d=crear_arreglo_int(y);
+            d=elm_repetidos(b,m);
+            cout<<"El arreglo resultante es"<<endl;
+            escribir_arreglo_int(union_arrs(c,x,d,repetidos(b,m)),x+y);
+            cout<<endl;
+        }
         break;
         case 2:
             numericos();
@@ -534,14 +553,42 @@ void menu_principal(){
     while(k!=0);
 }
 
+void menu_principal(){
+ char** A= opciones(6);
+    A[0] = "La granja";
+    A[1] = "Numericos";
+    A[2] = "Geometricos";
+    A[3] = "Otros";
+    A[4] = "Arreglos";
+    A[5] = "Arreglos como conjuntos";
+    int k;
+    do{
+        k = menu(A,6);
+    switch(k){
+        case 1:
+           granja();
+        break;
+        case 2:
+            numericos();
+        break;
+        case 3:
+            geometricos();
+        break;
+        case 4:
+            otros();
+        break;
+        case 5:
+            arreglos();
+        break;
+        case 6:
+            arr_conj();
+        break;
+    }
+    }
+    while(k!=0);
+}
+
 int main(){
-//    menu_principal();
-int x,y;
-    cin>>x>>y;
-    int* b=crear_arreglo_int(x);
-    int* c=crear_arreglo_int(y);
-    leer_arreglo_int(b,x);
-    leer_arreglo_int(c,y);
-    escribir_arreglo_int(union_arrs(b,x,c,y),repetidos(b,x));
+    menu_principal();
     return 0;
 }

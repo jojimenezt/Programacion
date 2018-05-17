@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arr_conj.cpp" />
+		<Unit filename="arr_conj.h" />
 		<Unit filename="arreglos_ent.cpp" />
 		<Unit filename="arreglos_ent.h" />
 		<Unit filename="geometricos.cpp" />
