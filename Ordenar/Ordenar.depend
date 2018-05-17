@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1525917793 source:d:\documents\github\programacion\ordenar\negocio.cpp
+	"negocio.h"
+
+1525917718 d:\documents\github\programacion\ordenar\negocio.h
+
+1526098024 source:d:\documents\github\programacion\ordenar\geometricos.cpp
+	<iostream>
+	"geometricos.h"
+	"numericos.h"
+
+1526097925 d:\documents\github\programacion\ordenar\geometricos.h
+
+1526524504 source:d:\documents\github\programacion\ordenar\arreglos_ent.cpp
+	"arreglos_ent.h"
+	<iostream>
+	"numericos.h"
+
+1526082452 source:d:\documents\github\programacion\ordenar\granja.cpp
+	"granja.h"
+
+1526095430 d:\documents\github\programacion\ordenar\granja.h
+
+1526523955 source:d:\documents\github\programacion\ordenar\numericos.cpp
+	"numericos.h"
+
+1526523967 d:\documents\github\programacion\ordenar\numericos.h
+
+1526098182 source:d:\documents\github\programacion\ordenar\otros.cpp
+	"otros.h"
+	"numericos.h"
+
+1526098152 d:\documents\github\programacion\ordenar\otros.h
+
+1526524669 source:d:\documents\github\programacion\ordenar\main.cpp
+	<iostream>
+	"negocio.h"
+	"granja.h"
+	"numericos.h"
+	"geometricos.h"
+	"otros.h"
+	"arreglos_ent.h"
+
+1526524551 d:\documents\github\programacion\ordenar\arreglos_ent.h
+

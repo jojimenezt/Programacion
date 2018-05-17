@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arreglos_ent.cpp" />
+		<Unit filename="arreglos_ent.h" />
+		<Unit filename="geometricos.cpp" />
+		<Unit filename="geometricos.h" />
 		<Unit filename="granja.cpp" />
 		<Unit filename="granja.h" />
 		<Unit filename="main.cpp" />
@@ -39,6 +43,8 @@
 		<Unit filename="negocio.h" />
 		<Unit filename="numericos.cpp" />
 		<Unit filename="numericos.h" />
+		<Unit filename="otros.cpp" />
+		<Unit filename="otros.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
