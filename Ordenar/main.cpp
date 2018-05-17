@@ -536,8 +536,16 @@ void arr_conj(){
             cout<<endl;
         }
         break;
-        case 2:
-            numericos();
+        case 2:{
+            int x=repetidos(a,n),y=repetidos(b,m);
+            int* c=crear_arreglo_int(x);
+            c=elm_repetidos(a,n);
+            int* d=crear_arreglo_int(y);
+            d=elm_repetidos(b,m);
+            cout<<"El arreglo resultante es"<<endl;
+            escribir_arreglo_int(inter_arrs(c,x,d,repetidos(b,m)),x+y);
+            cout<<endl;
+        }
         break;
         case 3:
             geometricos();

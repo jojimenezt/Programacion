@@ -3,4 +3,6 @@
 
 int* union_arrs(int* a,int n,int*b,int m);
 
+int* inter_arrs(int* a,int n,int*b,int m);
+
 #endif // ARR_CONJ_H_INCLUDED

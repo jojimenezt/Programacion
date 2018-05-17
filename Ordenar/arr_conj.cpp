@@ -13,3 +13,17 @@ int* union_arrs(int* a,int n,int*b,int m){
     }
     return c;
 }
+
+int* inter_arrs(int* a,int n,int*b,int m){
+    int h =1;
+    int* c = crear_arreglo_int(h);
+    for(int i=0;i<m;i++){
+        for(int l=0;l<n;l++){
+            if(a[l]==b[i]){
+                c[h++] = a[i];
+            }
+        }
+    }
+    return c;
+}
+
