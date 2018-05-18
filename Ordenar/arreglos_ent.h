@@ -43,4 +43,6 @@ int* elm_repetidos(int* a, int n);
 
 int repetidos(int* a, int n);
 
+int* imprimir(int* x);
+
 #endif // ARREGLOS_ENT_H_INCLUDED

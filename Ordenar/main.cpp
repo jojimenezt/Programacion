@@ -503,6 +503,88 @@ void arreglos(){
     while(k!=0);
 }
 
+void arr_conj_opt(){
+ char** A= opciones(6);
+    A[0] = "Union";
+    A[1] = "Interseccion";
+    A[2] = "Diferencia";
+    A[3] = "Diferencia simetrica";
+    A[4] = "Pertenece";
+    A[5] = "Contenido";
+    int k;
+    int n,m;
+    cout<<"Ingrese el tamano del primer conjunto"<<endl;
+    cin>>n;
+    int* a=crear_arreglo_int(n);
+    cout<<"Arreglo 1"<<endl;
+    leer_arreglo_int(a,n);
+    cout<<"Ingrese el tamano del segundo conjunto"<<endl;
+    cin>>m;
+    int* b=crear_arreglo_int(m);
+    cout<<"Arreglo 2"<<endl;
+    leer_arreglo_int(b,m);
+    int x=repetidos(a,n),y=repetidos(b,m);
+    int* c=crear_arreglo_int(x);
+    c=elm_repetidos(a,n);
+    int* d=crear_arreglo_int(y);
+    d=elm_repetidos(b,m);
+    do{
+        k = menu(A,6);
+    switch(k){
+        case 1:{
+            cout<<"El arreglo resultante tras la union de los dos conjuntos es"<<endl;
+            escribir_arreglo_int(elm_repetidos(union_arrs(c,x,d,y),x+y),repetidos(union_arrs(c,x,d,y),x+y));
+            cout<<endl;
+        }
+        break;
+        case 2:{
+            cout<<"El arreglo resultante que se encuentra en la interseccion de los dos conjuntos es"<<endl;
+            imprimir(inter_arrs(c,x,d,y));
+            cout<<endl;
+        }
+        break;
+        case 3:{
+            cout<<"La diferencia del primer conjunto con el segundo es"<<endl;
+            imprimir(difer_arrs(c,x,d,y));
+            cout<<endl;
+        }
+        break;
+        case 4:{
+            cout<<"La diferencia simetrica entre los dos arreglos es"<<endl;
+            imprimir(difer_sim_arrs(c,x,d,y));
+            cout<<endl;
+        }
+        break;
+        case 5:{
+            int t;
+            cout << "Ingrese el numero a verificar si esta en alguno de los conjuntos: ";
+            cin >> t;
+            bool* sor = pert_arrs(c,x,d,y,t);
+            if(sor[0]==1){
+                cout << "Pertenece al primer conjunto" << endl;
+            }else{
+                cout << "No pertenece al primer conjunto"<< endl;
+            }
+            if(sor[1]==1){
+                cout << "Pertenece al segundo conjunto"<< endl;
+            }else{
+                cout << "No pertenece al segundo conjunto"<< endl;
+            }
+        }
+        break;
+        case 6:{
+            if(cont_arrs(c,x,d,y)==1){
+                cout << "El primer conjunto esta contenido en el segundo" << endl;
+            }else{
+                cout << "El primer conjunto no esta contenido en el segundo" << endl;
+            }
+        }
+        break;
+        }
+    }
+    while(k!=0);
+}
+
 void arr_conj(){
  char** A= opciones(7);
     A[0] = "Union";
@@ -517,44 +599,72 @@ void arr_conj(){
     cout<<"Ingrese el tamano del primer conjunto"<<endl;
     cin>>n;
     int* a=crear_arreglo_int(n);
+    cout<<"Arreglo 1"<<endl;
     leer_arreglo_int(a,n);
     cout<<"Ingrese el tamano del segundo conjunto"<<endl;
     cin>>m;
     int* b=crear_arreglo_int(m);
+    cout<<"Arreglo 2"<<endl;
     leer_arreglo_int(b,m);
+    int x=repetidos(a,n),y=repetidos(b,m);
+    int* c=crear_arreglo_int(x);
+    c=elm_repetidos(a,n);
+    int* d=crear_arreglo_int(y);
+    d=elm_repetidos(b,m);
     do{
         k = menu(A,7);
     switch(k){
         case 1:{
-            int x=repetidos(a,n),y=repetidos(b,m);
-            int* c=crear_arreglo_int(x);
-            c=elm_repetidos(a,n);
-            int* d=crear_arreglo_int(y);
-            d=elm_repetidos(b,m);
-            cout<<"El arreglo resultante es"<<endl;
-            escribir_arreglo_int(union_arrs(c,x,d,repetidos(b,m)),x+y);
+            cout<<"El arreglo resultante tras la union de los dos conjuntos es"<<endl;
+            escribir_arreglo_int(elm_repetidos(union_arrs(c,x,d,y),x+y),repetidos(union_arrs(c,x,d,y),x+y));
             cout<<endl;
         }
         break;
         case 2:{
-            int x=repetidos(a,n),y=repetidos(b,m);
-            int* c=crear_arreglo_int(x);
-            c=elm_repetidos(a,n);
-            int* d=crear_arreglo_int(y);
-            d=elm_repetidos(b,m);
-            cout<<"El arreglo resultante es"<<endl;
-            escribir_arreglo_int(inter_arrs(c,x,d,repetidos(b,m)),x+y);
+            cout<<"El arreglo resultante que se encuentra en la interseccion de los dos conjuntos es"<<endl;
+            imprimir(inter_arrs(c,x,d,y));
             cout<<endl;
         }
         break;
-        case 3:
-            geometricos();
+        case 3:{
+            cout<<"La diferencia del primer conjunto con el segundo es"<<endl;
+            imprimir(difer_arrs(c,x,d,y));
+            cout<<endl;
+        }
         break;
-        case 4:
-            otros();
+        case 4:{
+            cout<<"La diferencia simetrica entre los dos arreglos es"<<endl;
+            imprimir(difer_sim_arrs(c,x,d,y));
+            cout<<endl;}
         break;
-        case 5:
-            arreglos();
+        case 5:{
+            int t;
+            cout << "Ingrese el numero a verificar si esta en alguno de los conjuntos: ";
+            cin >> t;
+            bool* sor = pert_arrs(c,x,d,y,t);
+            if(sor[0]==1){
+                cout << "Pertenece al primer conjunto" << endl;
+            }else{
+                cout << "No pertenece al primer conjunto"<< endl;
+            }
+            if(sor[1]==1){
+                cout << "Pertenece al segundo conjunto"<< endl;
+            }else{
+                cout << "No pertenece al segundo conjunto"<< endl;
+            }
+        }
+        break;
+        case 6:{
+            if(cont_arrs(c,x,d,y)==1){
+                cout << "El primer conjunto esta contenido en el segundo" << endl;
+            }else{
+                cout << "El primer conjunto no esta contenido en el segundo" << endl;
+            }
+        }
+        break;
+        case 7:{
+            arr_conj_opt();
+        }
         break;
     }
     }

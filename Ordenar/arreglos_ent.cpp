@@ -213,3 +213,11 @@ int repetidos(int* a, int n){
     }
     return z;
 }
+
+int* imprimir(int* x){
+    int s = x[0];
+    for(int i=1;i<s;i++){
+        cout<<x[i]<<" ";
+    }
+    return x;
+}
